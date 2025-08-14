@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
         await register.run(data.email, data.firstname, data.lastname);
 
 
-        NextResponse.json({
+        return NextResponse.json({
             message: 'Email saved successfully',
         })
     } catch (error) {
